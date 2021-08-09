@@ -5,4 +5,21 @@ $(document).ready(function () {
         myItems.push("<li>item : " + i + "</li>");
     }
     myList.append(myItems.join(""));
+    $("#myDiv a").click(function (event) {
+        event.preventDefault();
+    });
+    $("#myDiv a:first").attr("href", "newDestination.html");
+    $("#myDiv a:first").attr({
+        "href": "newDestination.xml",
+        "rel": "nofollow"
+    });
+    $("#myDiv a:first").attr({
+        "rel": "nofollow",
+        "href": function(idx, href) {
+            return "/new/" + href;
+        }
+    });
+    $("#myDiv a:first").attr("href", function(idx, href) {
+        return "/new/" + href;
+    })
 });
