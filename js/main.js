@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    $("a").attr({
-        title: "all titles are the same too!",
-        href: "index.html"
-    });
-    console.log($("a").attr("href"));
+    var myItems = [];
+    var myList = $("#myList");
+    for (var i = 0; i < 10; i++) {
+        myItems.push("<li>item : " + i + "</li>");
+    }
+    myList.append(myItems.join(""));
 });
