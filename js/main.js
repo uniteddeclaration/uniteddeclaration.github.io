@@ -8,18 +8,12 @@ $(document).ready(function () {
     $("#myDiv a").click(function (event) {
         event.preventDefault();
     });
-    $("#myDiv a:first").attr("href", "newDestination.html");
-    $("#myDiv a:first").attr({
-        "href": "newDestination.xml",
-        "rel": "nofollow"
-    });
     $("#myDiv a:first").attr({
         "rel": "nofollow",
         "href": function(idx, href) {
-            return "/new/" + href;
+            return href;
         }
     });
-    $("#myDiv a:first").attr("href", function(idx, href) {
-        return "/new/" + href;
-    })
+    var target = document.getElementById("target");
+    $(target).html("<td>table list td</td>");
 });
