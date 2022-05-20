@@ -1,8 +1,8 @@
 $(document).ready(function () {
     var myItems = [];
     var myList = $("#myList");
-    for (var i = 0; i < 10; i++) {
-        myItems.push("<li>item : " + i + "</li>");
+    for (var i = 0; i < 1; i++) {
+        myItems.push("<li>原则 " + "" + "</li>");
     }
     myList.append(myItems.join(""));
     $("#myDiv a").click(function (event) {
@@ -15,5 +15,5 @@ $(document).ready(function () {
         }
     });
     var target = document.getElementById("target");
-    $(target).html("<td>table list td</td>");
+    $(target).html("<td>暂未开放...</td>");
 });

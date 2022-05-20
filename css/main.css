@@ -2,3 +2,8 @@ body{
     padding-top:70px;
     padding-bottom: 30px;
 }
+a:link{color:#ffffff;}
+a:visited {color:#ffc400;}
+a:hover {color:#ffc400;}
+a:active {color:#ffc400;}
+a:link,a:visited,a:hover,a:active{text-decoration:none;}
